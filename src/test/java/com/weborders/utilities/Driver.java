@@ -17,7 +17,7 @@ public class Driver {
 
     }
 
-    public static WebDriver getDriverPool() {
+    public synchronized static WebDriver getDriverPool() {
         //if webdriver object doesn't exist
         //create it
         if (driverPool.get() == null) {
